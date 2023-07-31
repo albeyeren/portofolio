@@ -1,0 +1,284 @@
+:root {
+    --dark: #010101;
+    --white: #f8f8f8;
+    --red: #d62c40;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--dark);
+    color: white;
+    /* min-height: 3000px; */
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 5%;
+    background-color: rgba(1, 1, 1, 0.8%);
+    /* border-bottom: 1px solid #010101; */
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 9999;
+}
+
+.navbar .navbar-logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--white);
+    font-style: italic;
+}
+
+.navbar .navbar-nav a {
+    color: var(--white);
+    display: inline-block;
+    font-size: 1.2rem;
+    margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+    color: var(--red);
+}
+
+.navbar .navbar-nav a::after {
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--red);
+    transform: scaleX(0);
+    transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+    transform: scaleX(1);
+}
+
+/* #hamburger-menu {
+    display: none;
+} */
+
+/* Hero */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    /* background-image: url(../img/background.jpg); */
+    background-color: var(--dark);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    bottom: 0;
+    background: linear-gradient(0deg, rgba(1, 1, 3, 1) 8%, rgba(255, 255, 255, 0) 50%);
+}
+
+.hero .content {
+    padding: 1.4rem 7%;
+    max-width: 60rem;
+}
+
+.hero .content p {
+    font-size: 1.6rem;
+    line-height: 1.2;
+}
+
+.hero .content p span {
+    color: var(--red);
+}
+
+.hero .content h2 {
+    font-size: 2em;
+    margin-top: 2.5rem;
+    color: var(--white);
+    text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+    line-height: 1.3;
+}
+
+/* .hero .content .hire,
+.about .hire {
+    margin-top: 2.5rem;
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+    color: var(--white);
+    border: 1px solid var(--white);
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+.hero .content .hire:hover,
+.about .hire:hover {
+    color: var(--red);
+    border: 1px solid var(--red);
+} */
+
+
+/* About */
+.about,
+.skill,
+.contact {
+    padding: 8.5rem 7%;
+}
+
+.about .title,
+.skill .title,
+.contact .title {
+    display: flex;
+}
+
+.about .title h2,
+.skill .title h2,
+.contact .title h2 {
+    text-align: start;
+    font-size: 2.4rem;
+    margin-bottom: 3rem;
+    margin-left: 1.4rem;
+    font-weight: 500;
+}
+
+.about .title .red-line,
+.skill .title .red-line,
+.contact .title .red-line {
+    width: 5px;
+    height: 3.2rem;
+    margin-top: 0.1rem;
+    background-color: var(--red);
+}
+
+.about .row {
+    display: flex;
+}
+
+.about .row .content {
+    flex: 1 1 35rem;
+}
+
+.about .row .content h3 {
+    margin-bottom: 2.5rem;
+    font-weight: 400;
+}
+
+.about .row .content h3 span {
+    color: var(--red);
+}
+
+.about .row .content p {
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.about .row .content p span {
+    color: var(--red);
+}
+
+/* Skill */
+.skill .row {
+    display: flex;
+    line-height: 2;
+}
+
+.skill .row .content h3 {
+    /* color: var(--red); */
+    margin-top: 1rem;
+}
+
+.skill .row .content .html {
+    color: #E96228;
+}
+
+.skill .row .content .css {
+    color: #3595CF;
+}
+
+.skill .row .content .js {
+    color: #F7D724;
+}
+
+/* Contact */
+
+.contact .row {
+    display: flex;
+}
+
+.contact .row .content h1 {
+    color: var(--red);
+    font-size: 2rem;
+    font-weight: 500;
+    margin-top: 2rem;
+}
+
+.contact .row .content h3 {
+    margin-top: 2rem;
+}
+
+.contact .row .content p {
+    margin-top: 2rem;
+}
+
+.contact .hire {
+    margin-top: 2.5rem;
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+    color: var(--white);
+    border: 1px solid var(--white);
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+.contact .hire:hover {
+    color: var(--red);
+    border: 1px solid var(--red);
+}
+
+/* footer */
+
+footer {
+    background-color: #1d1c1c;
+    text-align: center;
+    padding: 1rem 0 2rem;
+    margin-top: -1rem;
+}
+
+footer .social {
+    padding: 1rem;
+}
+
+footer .social a {
+    color: var(--white);
+    margin: 1rem;
+}
+
+footer .social a:hover {
+    color: var(--red);
+}
+
+footer .credit {
+    font-size: 0.85rem;
+}
